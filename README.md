@@ -57,6 +57,17 @@ email: admin@admin.com
 password: admin123
 ~~~
 
+##### Puntos adicionales 
+
+~~~
+- En un principio la idea era que el mismo actualizador de personas, usara la misma tabla de usuarios. Por ese motivo las migraciones estan reflejadas de esa manera.
+
+- Se intento usar la plantilla adminlte para acelerar la interfaz grafica pero al final solo se pudo configurar el bootstrap a pesar de que no se uso por completo
+
+- Ya que es la primera vez que manejo este framework no pude completar el ejercicio pero planeo continuarlo ya que me parecion un framework bastante interesante
+
+~~~
+
 
 
 
