@@ -1,0 +1,26 @@
+<h1>People List</h1>
+
+<div class="table-responsive">
+  <table class="table">
+      <thead class="table-light">
+        <tr>
+	      	<td>id</td>
+	      	<td>email</td>
+	      	<td>name</td>
+	      	<td>actions</td>
+ 		</tr>
+	  </thead>
+	  <tbody>
+	     <% @people.each do |row| %>
+	     <tr>
+	        <td><%= row.id %></td>
+	        <td><%= row.email %></td>
+	        <td class="align-top"><%= row.name %></td>
+	        <td><%= link_to 'Show', person_path(row.id) %></td>
+        </tr>        
+        <% end %>
+
+	  </tbody>
+
+  </table>
+</div>

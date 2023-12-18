@@ -1,0 +1,61 @@
+<h1>New Person</h1>
+
+<%= form_with model: @person do |f| %>
+
+<% if @person.errors.any? %>
+    <div style="color: red">
+      <h3><%= pluralize(@person.errors.count, "error") %> :</h3>
+
+      <ul>
+        <% @person.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+   <div> 
+    <%= f.label :name %> <br /> 
+    <%= f.text_field :name %> 
+  </div> 
+
+   <div> 
+    <%= f.label :document_emission_date %> <br /> 
+    <%= f.text_field :document_emission_date %> 
+  </div> 
+
+   <div> 
+    <%= f.label :document_expire_date %> <br /> 
+    <%= f.text_field :document_expire_date %> 
+  </div>     
+
+   <div> 
+    <%= f.label :main_phone %> <br /> 
+    <%= f.text_field :main_phone %> 
+  </div>     
+
+   <div> 
+    <%= f.label :secondary_phone %> <br /> 
+    <%= f.text_field :secondary_phone %> 
+  </div>     
+
+   <div> 
+    <%= f.label :document_types_id %> <br /> 
+      <%= f.collection_select :document_types_id, DocumentType.order(:name),:id,:name, include_blank: true %>
+
+  </div>  
+   <div> 
+    <%= f.label :document_number %> <br /> 
+    <%= f.text_field :document_number %> 
+  </div>   
+
+
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,11 @@
+<div>
+	<p><h2><%= @person.name%></h2></p>
+	<p>email: <%= @person.email %></p>	
+	<p><%= @person.main_phone %></p>
+  <p><%= @person.secondary_phone %></p>
+  <p>document_number:<%= @person.document_number %></p>
+  <p>document_emission_date: <%= @person.document_emission_date %></p>
+	<p>document_expire_date:<%= @person.document_expire_date %></p>
+	<%= link_to 'Edit', edit_person_path(@person) %>
+	<%= button_to 'delete', person_path(@person), method: :delete, data: {  turbo_confirm: 'Are you sure?'} %>
+</div>
